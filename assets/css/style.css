@@ -1,0 +1,49 @@
+/* Styling Trivia Game*/
+
+*{
+    box-sizing: border-box;
+}
+body {
+  
+  background-color: lightyellow;
+    
+
+}
+.container{
+ 
+}
+button{
+  background-color:teal;
+}
+
+  @media screen and (max-width: 640px) {
+    body {
+        background-color: #333;
+        font-size: 20px;
+      }
+    
+      .container {
+       
+        
+       
+      }
+       img{
+        width:200px;
+        height:200px;
+        top:170px;
+      }
+      #startOverBtn{
+        
+        height:39px;
+      }
+      #startBtn
+      {
+        height:40px;
+      }
+      .answerList,#startOverBtn,#startBtn,h2{
+        font-size: 20px;
+      }
+      h1{
+        font-size: 30px;
+      }
+    }
