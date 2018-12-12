@@ -10,10 +10,14 @@ body {
 
 }
 .container{
- 
+ margin-top:20px;
 }
 button{
   background-color:teal;
+}
+img{
+  width:200px;
+  height:200px;
 }
 
   @media screen and (max-width: 640px) {
