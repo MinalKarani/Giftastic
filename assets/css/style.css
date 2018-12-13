@@ -6,6 +6,7 @@
 body {
   
   background-color: lightyellow;
+  font-size: 16px;
     
 
 }
@@ -18,8 +19,25 @@ button{
 img{
   width:200px;
   height:200px;
+  padding:20px;
 }
 
+.gifDiv{
+  float:left;
+}
+
+p{
+  padding-left: 20px;
+  text-align: left;
+}
+.row{
+  margin-top: 20px;
+}
+.btn{
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+}
   @media screen and (max-width: 640px) {
     body {
         background-color: #333;
