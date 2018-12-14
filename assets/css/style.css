@@ -1,11 +1,11 @@
-/* Styling Trivia Game*/
+/* Styling Giphy Game*/
 
 *{
     box-sizing: border-box;
 }
 body {
   
-  background-color: lightyellow;
+  background-color: lightgray;
   font-size: 16px;
     
 
@@ -13,13 +13,11 @@ body {
 .container{
  margin-top:20px;
 }
-button{
-  background-color:teal;
-}
+
 img{
-  width:200px;
-  height:200px;
-  padding:20px;
+  width:225px;
+  height:220px;
+  padding:10px;
 }
 
 .gifDiv{
@@ -27,45 +25,41 @@ img{
 }
 
 p{
-  padding-left: 20px;
+  padding-left: 10px;
   text-align: left;
+  font-weight: bold;
 }
+
+
 .row{
   margin-top: 20px;
 }
 .btn{
   padding: 10px;
   margin-left: 10px;
-  font-size: 15px;
+  font-size: 13px;
+  background-color:teal;
 }
-  @media screen and (max-width: 640px) {
+ @media screen and (max-width: 640px) {
     body {
-        background-color: #333;
-        font-size: 20px;
+        
+        font-size: 14px;
       }
     
-      .container {
+      .btn {
+       padding:5px;  
+       margin-left: 5px;   
        
-        
-       
       }
-       img{
-        width:200px;
-        height:200px;
-        top:170px;
+      img{
+        width:150px;
+        height:150px;
+        padding:0px;
       }
-      #startOverBtn{
-        
-        height:39px;
+      p{
+        padding: 0px;
       }
-      #startBtn
-      {
-        height:40px;
-      }
-      .answerList,#startOverBtn,#startBtn,h2{
-        font-size: 20px;
-      }
-      h1{
-        font-size: 30px;
+      #imgContainer{
+        margin-left: 15px;
       }
     }

@@ -17,11 +17,13 @@ var intervalId;
 var newText="";
 var i=0;
 var queryurl="";
+var flagClick=false;
+var lnkDownload;
 
 //API Key
 var APIvalue="RIMwrYvXc0dkhKYzON01zcvaeucMiCDC";
 
-var baseurl = "https://api.giphy.com/v1/gifs/search?api_key=RIMwrYvXc0dkhKYzON01zcvaeucMiCDC&limit=10&q="
+var baseurl = "https://api.giphy.com/v1/gifs/search?api_key=RIMwrYvXc0dkhKYzON01zcvaeucMiCDC&limit=10&rating=g&q="
 
 
 //Create Buttons with Animal Names  
@@ -48,7 +50,8 @@ function CreateBtn(){
 //function to load Gif (from Giphy) on click of Animal button 
 function loadGif()
     {
-        $(".gifDiv").empty();
+        //if(flagClick===false)
+        //$(".gifDiv").empty();
         btnId=$(this).attr("id");
         btnVal=$(this).text();
         queryurl=baseurl+btnVal;
@@ -68,6 +71,7 @@ function loadGif()
                 newGifdiv.addClass("gifDiv");
                 //gif rating
                 var gifRating=$("<p>");
+                
                 gifRating.text("Rating: "+result.data[i].rating);
                 newGifdiv.append(gifRating);
                 //gif image
@@ -78,7 +82,15 @@ function loadGif()
                 gifImg.attr("data-still", result.data[i].images.fixed_width_still.url);
                 gifImg.attr("data-state", "still");
                 newGifdiv.append(gifImg);
+                //var btnDownload=$("<button>");
+                //btnDownload.text("Download");
+                lnkDownload=$("<a>");
+                lnkDownload.attr("href",result.data[i].images.fixed_width_still.url);
+                lnkDownload.attr("download");
+                lnkDownload.html("download");
+                newGifdiv.append(lnkDownload);
                 $("#imgContainer").prepend(newGifdiv);
+                lnkDownload.click();
             
             }
             
