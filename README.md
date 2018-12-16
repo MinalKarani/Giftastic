@@ -1,18 +1,15 @@
-# TriviaGame
-Link to Live Game: https://minalkarani.github.io/TriviaGame/
+# Giphy
+Link to  Game: https://minalkarani.github.io/Giphy-Assignment/
 
 
-Game Instructions:
+Instructions:
 
-Press "Start" Button to strat playing Trivia Game
-Game shows only one question until the player answers it or their time runs out.
+When the user clicks on a Animal name button, the page grabs 10 static, non-animated gif images from the GIPHY API and place them on the page.
 
-If the player selects the correct answer, after a few seconds,next question is displayed.
-If the player runs out of time,the correct answer is displayed and after few seconds,the next question is displayed.
-If the player chooses the wrong answer,correct answer is displayed and after few seconds,the next question is displayed.
+When the user clicks one of the still GIPHY images, the gif animates. If the user clicks the gif again, it stops animating.
 
-Final screen shows the number of correct answers, incorrect answers, unanswered questions.
-Press "Start Over" button to continue playing
+With every gif, its rating (PG, G, so on) and title is displayed.
+  
+Input box takes the value from a user and adds it into `topics` array. 
 
-Tools/Languages Used: Jquery-- Javascript -- HTML/CSS
 
