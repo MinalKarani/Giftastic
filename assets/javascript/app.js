@@ -3,7 +3,7 @@ $( document ).ready(function() {
 Topics=[
     "Dog",
     "Cat",
-    "Rabit",
+    "Rabbit",
     "Hamster",
     "Chicken",
     "Frog",
@@ -13,17 +13,16 @@ Topics=[
 ];
 
 
-var intervalId;
+
 var newText="";
 var i=0;
 var queryurl="";
-var flagClick=false;
-var lnkDownload;
+
 
 //API Key
 var APIvalue="RIMwrYvXc0dkhKYzON01zcvaeucMiCDC";
 
-var baseurl = "https://api.giphy.com/v1/gifs/search?api_key=RIMwrYvXc0dkhKYzON01zcvaeucMiCDC&limit=10&rating=g&q="
+var baseurl = "https://api.giphy.com/v1/gifs/search?api_key=RIMwrYvXc0dkhKYzON01zcvaeucMiCDC&limit=10&rating!=pg-13&q="
 
 
 //Create Buttons with Animal Names  
@@ -50,8 +49,7 @@ function CreateBtn(){
 //function to load Gif (from Giphy) on click of Animal button 
 function loadGif()
     {
-        //if(flagClick===false)
-        //$(".gifDiv").empty();
+        
         btnId=$(this).attr("id");
         btnVal=$(this).text();
         queryurl=baseurl+btnVal;
@@ -71,9 +69,13 @@ function loadGif()
                 newGifdiv.addClass("gifDiv");
                 //gif rating
                 var gifRating=$("<p>");
-                
                 gifRating.text("Rating: "+result.data[i].rating);
                 newGifdiv.append(gifRating);
+                //gif Title
+                var newtitle=(result.data[i].title).split('GIF')[0];
+                var gifTitle=$("<p>");
+                gifTitle.text("Title: "+newtitle);
+                newGifdiv.append(gifTitle);
                 //gif image
                 var gifImg=$("<img>");
                 gifImg.addClass("image");
@@ -82,15 +84,8 @@ function loadGif()
                 gifImg.attr("data-still", result.data[i].images.fixed_width_still.url);
                 gifImg.attr("data-state", "still");
                 newGifdiv.append(gifImg);
-                //var btnDownload=$("<button>");
-                //btnDownload.text("Download");
-                lnkDownload=$("<a>");
-                lnkDownload.attr("href",result.data[i].images.fixed_width_still.url);
-                lnkDownload.attr("download");
-                lnkDownload.html("download");
-                newGifdiv.append(lnkDownload);
                 $("#imgContainer").prepend(newGifdiv);
-                lnkDownload.click();
+                
             
             }
             

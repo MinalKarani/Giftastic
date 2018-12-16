@@ -28,6 +28,7 @@ p{
   padding-left: 10px;
   text-align: left;
   font-weight: bold;
+  overflow-wrap: break-word;
 }
 
 
@@ -58,6 +59,7 @@ p{
       }
       p{
         padding: 0px;
+        
       }
       #imgContainer{
         margin-left: 15px;
